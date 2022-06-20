@@ -1,5 +1,5 @@
 # Project information
-site_name: DVC_NLP_Project
+site_name: DVC_NLP_Project_usingMKDocs
 # defeine TOC or order of website-
 nav:
   - Home: index.md
@@ -9,8 +9,8 @@ site_description: >-
   DESCRIPTION
 
 # Repository
-repo_name: Asif-AI/DVC_NLP_Project
-repo_url: https://github.com/Asif-AI/DVC_NLP_Project
+repo_name: Asif-AI/DVC_NLP_Project_usingMKDocs
+repo_url: https://github.com/Asif-AI/DVC_NLP_Project_usingMKDocs
 
 # Configuration
 theme:

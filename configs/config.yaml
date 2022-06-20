@@ -2,6 +2,9 @@
 
 artifacts:
   ARTIFACTS_DIR: artifacts
+  PREPARED_DATA:  prepared
+  TRAIN_DATA:  train.tsv
+
   TRAINED_MODEL_DIR: model
   BASE_MODEL_DIR: base_model
   BASE_MODEL_NAME: base_model.h5

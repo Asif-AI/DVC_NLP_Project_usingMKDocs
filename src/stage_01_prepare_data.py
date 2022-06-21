@@ -1,6 +1,7 @@
 import argparse
 import os
 import shutil
+#from cv2 import split
 from tqdm import tqdm
 import logging
 from src.utils.common import read_yaml, create_directories
@@ -21,7 +22,21 @@ def main(config_path, params_path):
     ## read config files
     config = read_yaml(config_path)
     params = read_yaml(params_path)
-    pass
+    
+    source_data = config["source_data"]
+    source_data_dir = config["source_data"] ["data_dir"]
+    source_data_file = config["source_data"] ["data_file"]
+    source_data_path = os.path.join(source_data_dir, source_data_file)
+    
+    split = params["prepare"] ["split"] #split ratio from params file
+    seed = params["prepare"] ["seed"] #from params file
+
+    random.seed(seed)
+
+    artifacts = config ["artifacts"] #Where we are storing intermediate data
+    prepare_data_dir_path = os.path.join(artifacts ["ARTIFACTS_DIR"], artifacts ["PREPARED_DATA"])
+    create_directories = ([prepare_data_dir_path])
+
 
 
 if __name__ == '__main__':

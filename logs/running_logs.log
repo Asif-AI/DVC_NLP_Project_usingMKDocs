@@ -1,0 +1,7 @@
+[2022-06-21 14:14:42,481: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-21 14:14:42,481: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-21 14:14:42,484: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 14:14:42,484: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 14:14:42,484: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data completed!<<<<<
+

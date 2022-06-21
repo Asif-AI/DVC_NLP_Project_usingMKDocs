@@ -16,7 +16,7 @@ metrics:
 scores: scores.json
 
 plots:
-PRC; prc.json
+PRC: prc.json
 ROC: roc.json
 
 source_data:

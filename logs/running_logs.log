@@ -1,7 +1,8 @@
-[2022-06-21 14:14:42,481: INFO: stage_01_prepare_data]: 
+[2022-06-21 22:49:27,560: INFO: stage_01_prepare_data]: 
 ********************
-[2022-06-21 14:14:42,481: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
-[2022-06-21 14:14:42,484: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-06-21 14:14:42,484: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-06-21 14:14:42,484: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data completed!<<<<<
+[2022-06-21 22:49:27,560: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-21 22:49:27,563: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-21 22:49:27,564: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-21 22:49:27,564: INFO: common]: created directory at: artifacts\prepared
+[2022-06-21 22:49:30,362: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data completed!<<<<<
 

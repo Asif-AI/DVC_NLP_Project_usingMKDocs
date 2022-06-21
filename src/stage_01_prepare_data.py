@@ -7,7 +7,7 @@ from src.utils.common import read_yaml, create_directories
 import random
 
 
-STAGE = "Prepre_Data" ## <<< change stage name 
+STAGE = "Prepare_Data" ## <<< change stage name 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 

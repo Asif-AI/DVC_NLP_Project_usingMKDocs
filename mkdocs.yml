@@ -4,6 +4,7 @@ site_name: DVC_NLP_Project_usingMKDocs
 nav:
   - Home: index.md
   - Data_Prep_Stage: data_prep.md
+  - Featurization: featurization.md
 
 site_author: Asif Khan
 site_description: >-

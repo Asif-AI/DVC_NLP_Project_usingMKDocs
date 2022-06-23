@@ -3,7 +3,8 @@
 import argparse
 import os
 import logging
-from src.utils import read_yaml, create_directories, get_df, save_matrix
+from src.utils.common import read_yaml, create_directories, get_df 
+from src.utils.data_mgmt import process_posts, save_matrix
 import random
 from sklearn.feature_extraction.text import CountVactorization, TfidfTransform 
 
@@ -57,7 +58,7 @@ def main(config_path, params_path):
     train_words_tfidf_matrix = tfidf.transform(train_words_binary_matrix)
 #call a function to save matrix
 
-    save_matrix(df=df_train, matrix=train_words_tfidf_matrix, out_path=featurized_train_data_path)
+    save_matrix(df=df_train, text_matrix=train_words_tfidf_matrix, out_path=featurized_train_data_path)
 
 
 #testing data
@@ -69,7 +70,7 @@ def main(config_path, params_path):
 
 # Call a function to save the save_matrix
 
-    save_matrix(df=df_test, matrix=test_words_tfidf_matrix, out_path=featurized_test_data_path)
+    save_matrix(df=df_test, text_matrix=test_words_tfidf_matrix, out_path=featurized_test_data_path)
 
     bag_of_words.fit(train_words)
     train_words_binary_matrix = bag_of_words.transform(train_words)

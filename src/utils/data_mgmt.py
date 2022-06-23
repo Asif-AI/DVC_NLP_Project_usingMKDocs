@@ -4,7 +4,8 @@ import random
 import xml.etree.ElementTree as ET   #This will read the tags
 import re
 import joblib
-
+import numpy as np
+import scipy.sparse as sparse
 
 
 def process_posts(fd_in, fd_out_test, fd_out_train, target_tag, split):
@@ -28,7 +29,21 @@ def process_posts(fd_in, fd_out_test, fd_out_train, target_tag, split):
             logging.exception(msg) #logging the message
 
 
-def save_matrix(df, matrix, out_path)
-    id_matrix = df.id
+def save_matrix(df, text_matrix, out_path)
+    id_matrix = spars.csr_matrix(df.pid.astype(np.int64)).T
+    label_matrix = spars.csr_matrix(df.label.astype(np.int64)).T
+
+    result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
+
+    msg = f"The output matrix saved at {outpath} of shape : {result.shape}"
+    
+    logging.info(msg)
+
+    joblib.dump(result, out_path)
+
+
+    
+
+
 
 

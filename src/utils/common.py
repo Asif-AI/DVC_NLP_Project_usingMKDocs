@@ -1,5 +1,5 @@
 import os
-from cv2 import dft
+#from cv2 import dft
 import yaml
 import logging
 import time
@@ -24,13 +24,13 @@ def save_json(path: str, data: dict) -> None:
 
     logging.info(f"json file saved at: {path}")
 
-def get_df(path_to_data: str, sep: str="\t", column_names: list = ["Id", "Lebel", "text"], encoding = "utf8") -> pd.DataFrame:
+def get_df(path_to_data: str, sep: str="\t", encoding = "utf8") -> pd.DataFrame:
     df = pd.read_csv(
         path_to_data,
         delimiter=sep,
         encoding=encoding,
         header=None,
-        names=column_names,
+        #names=column_names,
     )
     logging.info(f"The input data frame {path_to_data} of size {df.shape} is read.")
     return df

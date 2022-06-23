@@ -3,15 +3,16 @@ from tqdm import tqdm
 import random
 import xml.etree.ElementTree as ET   #This will read the tags
 import re
+import joblib
 
 
 
 def process_posts(fd_in, fd_out_test, fd_out_train, target_tag, split):
     line_num = 1
+    column_names = "pid\tlabel\ttext\n"
     for line in tqdm(fd_in):
         try:
             fd_out = fd_out_train if random.random() > split else fd_out_test
-
             attr = ET.fromstring(line).attrib
 
             pid = attr.get('Id', "")
@@ -26,5 +27,8 @@ def process_posts(fd_in, fd_out_test, fd_out_train, target_tag, split):
             msg = f"skipping the broken line {line_num}: {e}\n"
             logging.exception(msg) #logging the message
 
+
+def save_matrix(df, matrix, out_path)
+    id_matrix = df.id
 
 

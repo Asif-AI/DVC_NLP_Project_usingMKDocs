@@ -28,3 +28,16 @@ Traceback (most recent call last):
   File "src/stage_01_prepare_data.py", line 24, in main
     config = read_yaml(config_path)
 NameError: name 'read_yaml' is not defined
+[2022-06-25 02:49:31,159: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-25 02:49:31,159: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-25 02:49:31,161: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-25 02:49:31,163: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-25 02:49:31,163: INFO: common]: created directory at: artifacts\prepared
+[2022-06-25 02:49:31,177: ERROR: stage_01_prepare_data]: name 'process_posts' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 61, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare_data.py", line 48, in main
+    process_posts(fd_in, fd_out_test, fd_out_train, tag, split)
+NameError: name 'process_posts' is not defined

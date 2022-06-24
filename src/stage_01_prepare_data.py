@@ -1,9 +1,9 @@
 import argparse
 import os
 import logging
-from src.utils import read_yaml, create_directories, process_posts
-#from src.utils.common import read_yaml, create_directories
-#from src.utils.data_mgmt import process_posts, save_matrix
+#from src.utils import read_yaml, create_directories, process_posts
+from src.utils.common import read_yaml, create_directories
+#from src.utils.data_mgmt import process_posts
 import random
 
 
@@ -28,10 +28,10 @@ def main(config_path, params_path):
     source_data_path = os.path.join(source_data_dir, source_data_file)
     
     split = params["prepare"] ["split"] #split ratio from params file
-    seed = params["prepare"] ["seed"] #from p arams file
+    seed = params["prepare"] ["seed"] #from params file
     tag = params["prepare"] ["tag"]
 
-    random.seed(seed)
+    random.seed(seed) 
 
     artifacts = config["artifacts"]
     prepare_data_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["PREPARED_DATA"])

@@ -1,0 +1,30 @@
+[2022-06-25 02:11:33,538: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-25 02:11:33,539: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-25 02:11:33,539: ERROR: stage_01_prepare_data]: name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 63, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare_data.py", line 24, in main
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined
+[2022-06-25 02:17:03,159: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-25 02:17:03,159: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-25 02:17:03,159: ERROR: stage_01_prepare_data]: name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 63, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare_data.py", line 24, in main
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined
+[2022-06-25 02:19:10,581: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-25 02:19:10,581: INFO: stage_01_prepare_data]: >>>>> stage Prepare_Data started <<<<<
+[2022-06-25 02:19:10,582: ERROR: stage_01_prepare_data]: name 'read_yaml' is not defined
+Traceback (most recent call last):
+  File "src/stage_01_prepare_data.py", line 63, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_01_prepare_data.py", line 24, in main
+    config = read_yaml(config_path)
+NameError: name 'read_yaml' is not defined

@@ -3,10 +3,12 @@
 import argparse
 import os
 import logging
-from src.utils.common import read_yaml, create_directories, get_df 
-from src.utils.data_mgmt import process_posts, save_matrix
+from src.utils import read_yaml, create_directories, get_df, save_matrix
+#from src.utils.data_mgmt import save_matrix
+#from src.utils.data_mgmt import process_posts
 import random
-from sklearn.feature_extraction.text import CountVactorization, TfidfTransform 
+from sklearn.feature_extraction.text import CountVactorization, TfidfTransform
+import joblib
 
 STAGE = "Featurization" ## <<< change stage name 
 

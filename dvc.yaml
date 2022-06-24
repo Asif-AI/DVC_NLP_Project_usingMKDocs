@@ -11,12 +11,12 @@
 
 
 # stages:
-#   Featurization:
-#     cmd: python src/stage_02_featurization.py
+#   train:
+#     cmd: python src/stage_03_train.py
 #     deps:
-#     - src/src\stage_02_featurization.py
+#     - src/stage_03_train.py
       - src/utils
-      - artifacts/prepared
+      - artifacts/features
 
 #     outs:
-      - artifacts/features
+      - artifacts/model/model.pkl

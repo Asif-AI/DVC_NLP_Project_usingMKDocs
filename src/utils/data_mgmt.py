@@ -1,5 +1,6 @@
 import logging
 from tqdm import tqdm
+from src import utils
 import random
 import xml.etree.ElementTree as ET   #This will read the tags
 import re
@@ -8,7 +9,7 @@ import numpy as np
 import scipy.sparse as sparse
 
 
-def process_posts(fd_in, fd_out_test, fd_out_train, target_tag, split):
+def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     line_num = 1
     column_names = "pid\tlabel\ttext\n"
     for line in tqdm(fd_in):

@@ -15,8 +15,7 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     for line in tqdm(fd_in):
         try:
             fd_out = fd_out_train if random.random() > split else fd_out_test
-            attr = ET.fromstring(line).attrib
-
+            attr = ET.fromstring(line).attrib #will read the attributes of each line and get tags
             pid = attr.get('Id', "")
             label = 1 if target_tag in attr.get('Tags', "") else 0
             title = re.sub(r"\s+", " ", attr.get('Title', "")).strip()
@@ -41,10 +40,3 @@ def save_matrix(df, text_matrix, out_path)
     logging.info(msg)
 
     joblib.dump(result, out_path)
-
-
-    
-
-
-
-

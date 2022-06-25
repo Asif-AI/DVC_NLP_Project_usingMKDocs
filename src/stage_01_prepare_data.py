@@ -31,7 +31,7 @@ def main(config_path, params_path):
     seed = params["prepare"] ["seed"] #from params file
     tag = params["prepare"] ["tag"]
 
-    random.seed(seed) 
+    random.seed(seed)
 
     artifacts = config["artifacts"]
     prepare_data_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["PREPARED_DATA"])

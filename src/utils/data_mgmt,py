@@ -1,13 +1,11 @@
 import logging
 from tqdm import tqdm
-from src import utils
 import random
 import xml.etree.ElementTree as ET   #This will read the tags
 import re
 import joblib
 import numpy as np
 import scipy.sparse as sparse
-
 
 def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     line_num = 1
@@ -16,10 +14,10 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
         try:
             fd_out = fd_out_train if random.random() > split else fd_out_test
             attr = ET.fromstring(line).attrib #will read the attributes of each line and get tags
-            pid = attr.get('Id', "")
-            label = 1 if target_tag in attr.get('Tags', "") else 0
-            title = re.sub(r"\s+", " ", attr.get('Title', "")).strip()
-            body = re.sub(r"\s+", " ", attr.get('Body', "")).strip()
+            pid = attr.get("Id", "")
+            label = 1 if target_tag in attr.get("Tags", "") else 0
+            title = re.sub(r"\s+", " ", attr.get("Title", "")).strip()
+            body = re.sub(r"\s+", " ", attr.get("Body", "")).strip()
             text = f"{title} {body}" #title + " " + body
 
             fd_out.write(f"{pid}\t{label}\t{text}\n")
@@ -30,12 +28,12 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
 
 
 def save_matrix(df, text_matrix, out_path)
-    id_matrix = spars.csr_matrix(df.pid.astype(np.int64)).T
-    label_matrix = spars.csr_matrix(df.label.astype(np.int64)).T
+    pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T
+    label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
 
     result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
 
-    msg = f"The output matrix saved at {outpath} of shape : {result.shape}"
+    msg = f"The output matrix saved at {out_path} of shape: {result.shape}"
     
     logging.info(msg)
 

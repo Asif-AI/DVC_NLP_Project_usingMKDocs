@@ -1,9 +1,7 @@
 import argparse
 import os
 import logging
-#from src.utils import read_yaml, create_directories, process_posts
-from src.utils.common import read_yaml, create_directories
-from src.utils.data_mgmt import process_posts
+from src.utils import read_yaml, create_directories, process_posts
 import random
 
 

@@ -12,3 +12,10 @@ print(A)
 s = csr_matrix(A)
 print(A)
 
+S = csr_matrix(A)
+print(S)
+print(type(S))
+
+B = S.todense()
+print(B)
+

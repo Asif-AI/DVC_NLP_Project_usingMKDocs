@@ -6,11 +6,11 @@ artifacts:
   TRAIN_DATA: train.tsv
   TEST_DATA: test.tsv
   FEATURIZED_DATA: features
-  FEATURIZED_DATA_TRAIN: train.pk1
-  FEATURIZED_DATA_TEST: test.pk1
+  FEATURIZED_DATA_TRAIN: train.pkl
+  FEATURIZED_DATA_TEST: test.pkl
 
   MODEL_DIR: model
-  MODEL_NAME: model.pk1
+  MODEL_NAME: model.pkl
 
 metrics:
   SCORES: scores.json

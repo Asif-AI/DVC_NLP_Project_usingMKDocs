@@ -1,5 +1,4 @@
-# dvc-project-template
-DVC project template
+# DVC NLP Project Using MKDocs
 
 ## STEPS -
 

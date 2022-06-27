@@ -5,7 +5,7 @@ from src.utils import read_yaml, create_directories, process_posts
 import random
 
 
-STAGE = "Prepare_Data" ## <<< change stage name 
+STAGE = "prepare_data" ## <<< change stage name 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -35,8 +35,8 @@ def main(config_path, params_path):
     prepare_data_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["PREPARED_DATA"])
     create_directories([prepare_data_dir_path])
 
-    train_data_path = os.path.join(prepare_data_dir_path, artifacts ["TRAIN_DATA"])
-    test_data_path = os.path.join(prepare_data_dir_path, artifacts ["TEST_DATA"])
+    train_data_path = os.path.join(prepare_data_dir_path, artifacts["TRAIN_DATA"])
+    test_data_path = os.path.join(prepare_data_dir_path, artifacts["TEST_DATA"])
 
     encode="utf8"
 

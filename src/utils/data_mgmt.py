@@ -10,6 +10,8 @@ import scipy.sparse as sparse
 def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     line_num = 1
     column_names = "pid\tlabel\ttext\n"
+    fd_out_train.write(column_names)
+    fd_out_test.write(column_names)
     for line in tqdm(fd_in):
         try:
             fd_out = fd_out_train if random.random() > split else fd_out_test
@@ -27,11 +29,11 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
             logging.exception(msg) #logging the message
 
 
-def save_matrix(df, text_matrix, out_path)
+def save_matrix(df, text_matrix, out_path):
     pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T
     label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
 
-    result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
+    result = sparse.hstack([pid_matrix, label_matrix, text_matrix], format="csr")
 
     msg = f"The output matrix saved at {out_path} of shape: {result.shape}"
     

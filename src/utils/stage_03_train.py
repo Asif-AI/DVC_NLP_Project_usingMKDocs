@@ -5,7 +5,7 @@ import joblib
 from sklearn.ensemble import RandomForestClassifier
 from tqdm import tqdm
 import logging
-#from src.utils.common import read_yaml, create_directories, process_posts, 
+from src.utils import read_yaml, create_directories 
 import random
 import joblib
 
@@ -33,7 +33,7 @@ def main(config_path, params_path):
     model_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], model_dir)
     create_directories(model_dir_path)
     model_name = artifacts["MODEL_NAME"]
-    model_path = os.path.join(model_dir_path , model_name)
+    model_path = os.path.join(model_dir_path, model_name)
 
     matrix = joblib.load(featurized_train_data_path)
 
@@ -55,17 +55,12 @@ def main(config_path, params_path):
         min_samples_split = min_split,
         n_jobs = n_jobs,
         random_state = seed
-    )
+        )
 
     model.fit(X, labels)
 
     joblib.dump(model, model_path)
     logging.info(f"saved our model at: {"model_path"})
-
-
-
-
-
 
 
 if __name__ == '__main__':

@@ -10,11 +10,26 @@ stages:
       md5: 6a6d2eace7b5ea8c0d8af89a3e346220
       size: 2287
     - path: src/utils
-      md5: 7749402b28c46c1a0d7e009350824c09.dir
-      size: 8487
-      nfiles: 7
+      md5: 358015f062da490234652ed83ba481da.dir
+      size: 5966
+      nfiles: 6
     outs:
     - path: artifacts/prepared
       md5: a94b614e2e643e723f59b90c6e9f6074.dir
       size: 23886351
+      nfiles: 2
+  featurization:
+    cmd: python src/stage_02_featurization.py
+    deps:
+    - path: src/stage_02_featurization.py
+      md5: 9d46040dd39d0beeac428287c7f39cb3
+      size: 3127
+    - path: src/utils
+      md5: 358015f062da490234652ed83ba481da.dir
+      size: 5966
+      nfiles: 6
+    outs:
+    - path: artifacts/features
+      md5: 6a45743559ada4d5d2280a37b38a05bd.dir
+      size: 12149900
       nfiles: 2

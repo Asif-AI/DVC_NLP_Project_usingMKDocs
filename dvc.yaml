@@ -9,13 +9,13 @@ stages:
     outs:
     - artifacts/prepared
 
-  # featurization:
-  #   cmd: python src/stage_02_featurization.py
-  #   deps:
-  #   - src/stage_02_featurization.py
-  #   - src/utils
-  #   outs:
-  #   - artifacts/features
+  featurization:
+    cmd: python src/stage_02_featurization.py
+    deps:
+    - src/stage_02_featurization.py
+    - src/utils
+    outs:
+    - artifacts/features
 
   # train:
   #   cmd: python src/stage_03_train.py

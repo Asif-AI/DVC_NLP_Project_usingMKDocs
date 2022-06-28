@@ -16,6 +16,6 @@ S = csr_matrix(A)
 print(S)
 print(type(S))
 
-B = S.todense()
+B = S.todense() #this command converts back to matrix
 print(B)
 

@@ -18,3 +18,119 @@
 [2022-06-28 21:21:53,909: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pk1 of shape: (17536, 2502)
 [2022-06-28 21:21:54,115: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2022-06-28 21:45:12,622: INFO: stage_03_train]: 
+********************
+[2022-06-28 21:45:12,622: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 21:45:12,626: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 21:45:12,628: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 21:45:12,628: INFO: common]: created directory at: artifacts\model
+[2022-06-28 21:45:12,638: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 21:45:12,639: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 21:45:12,639: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 21:45:12,639: ERROR: stage_03_train]: 'n_est'
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 77, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 50, in main
+    n_est = params["train"]["n_est"]
+KeyError: 'n_est'
+[2022-06-28 21:52:22,947: INFO: stage_03_train]: 
+********************
+[2022-06-28 21:52:22,947: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 21:52:22,951: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 21:52:22,953: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 21:52:22,953: INFO: common]: created directory at: artifacts\model
+[2022-06-28 21:52:22,959: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 21:52:22,959: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 21:52:22,959: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 21:52:22,959: ERROR: stage_03_train]: 'n_est'
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 77, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 50, in main
+    n_est = params["train"]["n_est"]
+KeyError: 'n_est'
+[2022-06-28 21:55:38,639: INFO: stage_03_train]: 
+********************
+[2022-06-28 21:55:38,639: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 21:55:38,642: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 21:55:38,644: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 21:55:38,644: INFO: common]: created directory at: artifacts\model
+[2022-06-28 21:55:38,650: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 21:55:38,650: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 21:55:38,650: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 21:55:38,650: ERROR: stage_03_train]: 'n_jobs'
+Traceback (most recent call last):
+  File "src/stage_03_train.py", line 77, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_03_train.py", line 51, in main
+    n_jobs = params["train"]["n_jobs"]
+KeyError: 'n_jobs'
+[2022-06-28 22:02:31,024: INFO: stage_03_train]: 
+********************
+[2022-06-28 22:02:31,024: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 22:02:31,030: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:02:31,033: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:02:31,033: INFO: common]: created directory at: artifacts\model
+[2022-06-28 22:02:31,041: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 22:02:31,041: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 22:02:31,042: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 22:02:32,292: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
+[2022-06-28 22:02:32,294: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
+[2022-06-28 22:02:48,829: INFO: stage_02_featurization]: 
+********************
+[2022-06-28 22:02:48,829: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-28 22:02:48,833: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:02:48,835: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:02:48,836: INFO: common]: created directory at: artifacts\features
+[2022-06-28 22:02:48,957: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (7464, 3) is read.
+[2022-06-28 22:02:54,974: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pk1 of shape: (7464, 2502)
+[2022-06-28 22:02:55,341: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (17536, 3) is read.
+[2022-06-28 22:03:01,892: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pk1 of shape: (17536, 2502)
+[2022-06-28 22:03:02,176: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
+[2022-06-28 22:03:04,139: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-28 22:03:04,139: INFO: stage_01_prepare_data]: >>>>> stage prepare_data started <<<<<
+[2022-06-28 22:03:04,142: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:03:04,145: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:03:04,145: INFO: common]: created directory at: artifacts\prepared
+[2022-06-28 22:03:07,854: INFO: stage_01_prepare_data]: >>>>> stage prepare_data completed!<<<<<
+
+[2022-06-28 22:10:57,772: INFO: stage_03_train]: 
+********************
+[2022-06-28 22:10:57,773: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 22:10:57,781: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:10:57,786: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:10:57,787: INFO: common]: created directory at: artifacts\model
+[2022-06-28 22:10:57,802: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 22:10:57,802: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 22:10:57,802: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 22:10:59,051: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
+[2022-06-28 22:10:59,053: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
+[2022-06-28 22:12:08,053: INFO: stage_03_train]: 
+********************
+[2022-06-28 22:12:08,053: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 22:12:08,056: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:12:08,059: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:12:08,059: INFO: common]: created directory at: artifacts\model
+[2022-06-28 22:12:08,066: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 22:12:08,066: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 22:12:08,066: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 22:12:09,277: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
+[2022-06-28 22:12:09,278: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
+[2022-06-28 22:12:21,805: INFO: stage_03_train]: 
+********************
+[2022-06-28 22:12:21,805: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-28 22:12:21,809: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-28 22:12:21,813: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-28 22:12:21,814: INFO: common]: created directory at: artifacts\model
+[2022-06-28 22:12:21,825: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-28 22:12:21,825: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-28 22:12:21,825: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-28 22:12:23,040: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
+[2022-06-28 22:12:23,041: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+

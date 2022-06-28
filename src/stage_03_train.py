@@ -24,20 +24,23 @@ def main(config_path, params_path):
     config = read_yaml(config_path)
     params = read_yaml(params_path)
 
+    #Load the files and save the model 
     artifacts = config["artifacts"]
     featurized_data_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], artifacts["FEATURIZED_DATA"])
     featurized_train_data_path = os.path.join(featurized_data_dir_path, artifacts["FEATURIZED_DATA_TRAIN"])
 
+   #Configuration and structure
     model_dir = artifacts["MODEL_DIR"]
     model_dir_path = os.path.join(artifacts["ARTIFACTS_DIR"], model_dir)
     create_directories([model_dir_path])
     model_name = artifacts["MODEL_NAME"]
     model_path = os.path.join(model_dir_path, model_name)
 
+    #get the train data matrix back
     matrix = joblib.load(featurized_train_data_path)
 
     labels = np.squeeze(matrix[:, 1].toarray())
-    X = matrix[:, 2:]
+    X = matrix[:, 2:] #second row onwards
 
     logging.info(f"input matrix size: {matrix.shape}")
     logging.info(f"X matrix size: {X.shape}")
@@ -59,7 +62,7 @@ def main(config_path, params_path):
     joblib.dump(model, model_path)
     logging.info(f"saved our model at: {model_path}")
     
-
+ 
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ stages:
       md5: 6a6d2eace7b5ea8c0d8af89a3e346220
       size: 2287
     - path: src/utils
-      md5: 358015f062da490234652ed83ba481da.dir
+      md5: 19d6aeab7a928e55a1030295f20e2f8e.dir
       size: 5966
       nfiles: 6
     outs:
@@ -22,10 +22,10 @@ stages:
     cmd: python src/stage_02_featurization.py
     deps:
     - path: src/stage_02_featurization.py
-      md5: 9d46040dd39d0beeac428287c7f39cb3
-      size: 3127
+      md5: 965bc2914a1f9812b09809a4013b5ee7
+      size: 3131
     - path: src/utils
-      md5: 358015f062da490234652ed83ba481da.dir
+      md5: 19d6aeab7a928e55a1030295f20e2f8e.dir
       size: 5966
       nfiles: 6
     outs:
@@ -33,3 +33,21 @@ stages:
       md5: 6a45743559ada4d5d2280a37b38a05bd.dir
       size: 12149900
       nfiles: 2
+  train:
+    cmd: python src/stage_03_train.py
+    deps:
+    - path: artifacts/features
+      md5: 6a45743559ada4d5d2280a37b38a05bd.dir
+      size: 12149900
+      nfiles: 2
+    - path: src/stage_03_train.py
+      md5: dc7170ca7e0081cf1a88c3a2bb624e5e
+      size: 2592
+    - path: src/utils
+      md5: 19d6aeab7a928e55a1030295f20e2f8e.dir
+      size: 5966
+      nfiles: 6
+    outs:
+    - path: artifacts/model/model.pk1
+      md5: 2d6db4d7f124407c5752dc4df26b7b33
+      size: 1403396

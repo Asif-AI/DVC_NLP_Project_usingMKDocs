@@ -42,3 +42,35 @@
 [2022-06-30 00:02:48,157: INFO: common]: created directory at: artifacts\prepared
 [2022-06-30 00:02:50,787: INFO: stage_01_prepare_data]: >>>>> stage prepare_data completed!<<<<<
 
+[2022-06-30 00:38:56,906: INFO: stage_01_prepare_data]: 
+********************
+[2022-06-30 00:38:56,906: INFO: stage_01_prepare_data]: >>>>> stage prepare_data started <<<<<
+[2022-06-30 00:38:56,909: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:38:56,911: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:38:56,911: INFO: common]: created directory at: artifacts\prepared
+[2022-06-30 00:38:59,580: INFO: stage_01_prepare_data]: >>>>> stage prepare_data completed!<<<<<
+
+[2022-06-30 00:39:01,584: INFO: stage_02_featurization]: 
+********************
+[2022-06-30 00:39:01,585: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-30 00:39:01,588: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:39:01,590: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:39:01,590: INFO: common]: created directory at: artifacts\features
+[2022-06-30 00:39:01,694: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (7464, 3) is read.
+[2022-06-30 00:39:06,411: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pk1 of shape: (7464, 2502)
+[2022-06-30 00:39:06,619: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (17536, 3) is read.
+[2022-06-30 00:39:11,165: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pk1 of shape: (17536, 2502)
+[2022-06-30 00:39:11,410: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
+[2022-06-30 00:39:13,488: INFO: stage_03_train]: 
+********************
+[2022-06-30 00:39:13,488: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2022-06-30 00:39:13,491: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:39:13,493: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:39:13,493: INFO: common]: created directory at: artifacts\model
+[2022-06-30 00:39:13,499: INFO: stage_03_train]: input matrix size: (7464, 2502)
+[2022-06-30 00:39:13,499: INFO: stage_03_train]: X matrix size: (7464, 2500)
+[2022-06-30 00:39:13,499: INFO: stage_03_train]: Y matrix size or labels: (7464,)
+[2022-06-30 00:39:14,429: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
+[2022-06-30 00:39:14,430: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+

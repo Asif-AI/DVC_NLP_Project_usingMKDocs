@@ -74,3 +74,51 @@
 [2022-06-30 00:39:14,429: INFO: stage_03_train]: saved our model at: artifacts\model\model.pk1
 [2022-06-30 00:39:14,430: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
 
+[2022-06-30 00:42:30,318: INFO: stage_02_featurization]: 
+********************
+[2022-06-30 00:42:30,318: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2022-06-30 00:42:30,321: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:42:30,323: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:42:30,324: INFO: common]: created directory at: artifacts\features
+[2022-06-30 00:42:30,418: INFO: common]: The input data frame artifacts\prepared\train.tsv of size (7464, 3) is read.
+[2022-06-30 00:42:35,214: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pk1 of shape: (7464, 2502)
+[2022-06-30 00:42:35,436: INFO: common]: The input data frame artifacts\prepared\test.tsv of size (17536, 3) is read.
+[2022-06-30 00:42:40,243: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pk1 of shape: (17536, 2502)
+[2022-06-30 00:42:40,489: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
+[2022-06-30 00:42:45,808: INFO: stage_04_evaluate]: 
+********************
+[2022-06-30 00:42:45,808: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2022-06-30 00:42:45,811: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:42:45,813: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:42:45,994: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'predict_probo'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 115, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 46, in main
+    predictions_probability = model.predict_probo(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'predict_probo'
+[2022-06-30 00:47:33,626: INFO: stage_04_evaluate]: 
+********************
+[2022-06-30 00:47:33,626: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2022-06-30 00:47:33,629: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:47:33,631: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:47:33,793: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'predict_probo'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 115, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 46, in main
+    predictions_probability = model.predict_probo(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'predict_probo'
+[2022-06-30 00:52:40,712: INFO: stage_04_evaluate]: 
+********************
+[2022-06-30 00:52:40,712: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2022-06-30 00:52:40,715: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-06-30 00:52:40,717: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-06-30 00:52:40,878: ERROR: stage_04_evaluate]: 'RandomForestClassifier' object has no attribute 'pred'
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 115, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 46, in main
+    predictions_probability = model.pred(X)
+AttributeError: 'RandomForestClassifier' object has no attribute 'pred'
